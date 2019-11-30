@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_213744) do
+ActiveRecord::Schema.define(version: 2019_11_30_210256) do
 
   create_table "folders", force: :cascade do |t|
     t.string "name"
@@ -25,12 +25,12 @@ ActiveRecord::Schema.define(version: 2019_11_20_213744) do
     t.string "image"
     t.integer "quantity"
     t.integer "price"
-    t.text "tag", default: "--- []\n"
     t.string "description"
     t.string "note"
     t.integer "folder_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "qr_id"
   end
 
   create_table "users", force: :cascade do |t|
