@@ -16,6 +16,12 @@ class Api::V1::ProductsController < ApplicationController
         render json: product
     end
 
+    def update
+        product = Product.find(params[:id])
+        product.update(product_params)
+        render json: product
+    end
+
     def destroy
         product = Product.find(params[:id])
         product.destroy 
